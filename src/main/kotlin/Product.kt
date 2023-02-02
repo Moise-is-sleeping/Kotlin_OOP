@@ -1,20 +1,31 @@
 import kotlin.random.Random
 
-class Product(var Product_Name : String, var Price : Double ) {
+class Product(var Product_name : String, var Price : Double) {
     private var Serial_number = Generate()
-    init {
-        while (true){
-            if (Product_Name.length < 1){
-                print("Input valid Name => ")
-                Product_Name = readln()
-            }
-            else if(Price < 0.0){
-                print("Input valid Price => ")
-                Price = readln().toDouble()
+
+    var Product_Name = Product_name
+        set(value) {
+            if(value.isBlank()){
+                field = pedir()
             }else{
-                break
+                field = value
             }
         }
+
+    var Precio = Price
+    init {
+        Product_Name =Product_name
+
+    }
+
+
+    fun pedir() : String{
+        print("Please type a valid input !! --> ")
+        val a  = readln()
+        if (a.isBlank()){
+           return  pedir()
+        }
+        return a
     }
 
     private fun Generate(): Int{
@@ -23,7 +34,7 @@ class Product(var Product_Name : String, var Price : Double ) {
     }
 
     fun Summary(){
-        print("INFORME DE PRODUCTO \n------------------------------ \n<Nombre = ${Product_Name} > \n" + "<Serie = $Serial_number> \n" + "<Precio = $Price>\n")
+        print("INFORME DE PRODUCTO \n------------------------------ \n<Nombre = ${Product_Name} > \n" + "<Serie = $Serial_number> \n" + "<Precio = $Precio>\n")
     }
     fun Compare(product: Product):Boolean{
         val product1 = product
