@@ -1,3 +1,4 @@
+package ej_5_14
 import kotlin.random.Random
 
 class Product(var Product_name : String, var Price : Double) {

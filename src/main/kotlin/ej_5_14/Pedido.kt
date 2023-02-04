@@ -1,8 +1,10 @@
+package ej_5_14
+
 class Pedido {
 
-    val rice = Product("Rice",50.95)
-    val Sausages = Product("Sausages",35.5)
-    val Chicken = Product("Chicken",95.5)
+    val rice = Product("Rice", 50.95)
+    val Sausages = Product("Sausages", 35.5)
+    val Chicken = Product("Chicken", 95.5)
 
     var P_List = mutableListOf<Product>()
 
