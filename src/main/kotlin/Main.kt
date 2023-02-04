@@ -1,8 +1,7 @@
 fun main(){
-    val rice = Product("Rice",2.6)
-    val rice1 = Product("Rice",2.6)
-
-    print(rice.Compare(rice1))
+    val person1 = Pedido()
+    person1.Order()
+    person1.total()
 
 }
 
