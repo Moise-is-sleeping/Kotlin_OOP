@@ -3,11 +3,11 @@ package Herencia_Ej_Restaurante
 import kotlin.random.Random
 
 class Menu {
-    val IVA = 0.21
-    var Descuento = Random.nextDouble(1.0,10.0)
-    var Principal = ""
-    var Bedida = 0
-    var Postre = 0
+    private val IVA = 0.21
+    private var Descuento = Random.nextDouble(0.1,0.10)
+    private var Principal = ""
+    private var Bedida = 0
+    private var Postre = 0
 
     fun Menu(){
         print("\n---Principal---  \n\n* Entrecot (15€)\n* Pez Espada (12€)\n* Carrillada (10€)\n* Dorada (20€)\n* Otros (13€)\n-->")
@@ -19,6 +19,7 @@ class Menu {
 
     }
     fun Importe(){
+
         var subtotal = 0.0
         subtotal += when(Principal){
             "Entrecot" ->   15.0
@@ -39,7 +40,10 @@ class Menu {
             3 ->  4.0
             else -> 0.0
         }
-        subtotal += IVA
+        subtotal += subtotal * IVA
+        subtotal - subtotal * Descuento
+        print("""                                                           """)
+
     }
 
 }
