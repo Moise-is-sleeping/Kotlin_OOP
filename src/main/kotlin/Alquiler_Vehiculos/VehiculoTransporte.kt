@@ -5,9 +5,8 @@ abstract class VehiculoTransporte: Vehiculo{
     constructor(matricula_1 : String,duracion_1: Int, plaza_1 : Int ):super(matricula_1 , duracion_1){
         this.plaza = plaza_1
     }
-    abstract override fun alquiler()
-    override fun recibo(){
-        println("Matriclua : $matricula\nDuracion : $duracion\nPlazas : $plaza\nImporte : ")
-    }
+    abstract override fun alquiler():Double
+    abstract override fun recibo()
+
 
 }

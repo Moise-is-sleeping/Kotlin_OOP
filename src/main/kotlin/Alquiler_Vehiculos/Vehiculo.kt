@@ -20,7 +20,7 @@ abstract class Vehiculo {
     fun matricula_valida ():Boolean{
         return matricula.length == 7
     }
-    abstract fun alquiler()
+    abstract fun alquiler():Double
     abstract fun recibo()
 
 }
