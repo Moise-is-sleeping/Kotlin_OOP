@@ -1,4 +1,4 @@
-package Herencia_EJ_1//
+package ej_5_14.Herencia_EJ_1//
 //
 //open class Persona(var DNI : String, var Apellido2 : String, var Nombre : String) {
 //

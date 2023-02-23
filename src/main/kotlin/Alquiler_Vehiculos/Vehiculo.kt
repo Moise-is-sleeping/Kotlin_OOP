@@ -3,10 +3,10 @@ package Alquiler_Vehiculos
 abstract class Vehiculo {
     var matricula = ""
         set(value) {
-            if (matricula_valida()){
-                field = value
+            if (value.length != 7){
+                field = matricula_valida()
             }else{
-                print("Invalid Input !!")
+                field = value
             }
 
         }
@@ -17,8 +17,13 @@ abstract class Vehiculo {
         this.matricula = matricula_1
     }
 
-    fun matricula_valida ():Boolean{
-        return matricula.length == 7
+    fun matricula_valida ():String{
+       println("Matricula debe tener 7 digitos : ")
+       val a = readln()
+       if (a.length != 7 ) {
+           matricula_valida()
+       }
+        return a
     }
     abstract fun alquiler():Double
     abstract fun recibo()

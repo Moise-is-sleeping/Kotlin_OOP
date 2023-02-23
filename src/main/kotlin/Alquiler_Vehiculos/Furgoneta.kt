@@ -10,6 +10,7 @@ class Furgoneta:VehiculaCarga {
     }
 
     override fun recibo(){
-        println("Matriclua : $matricula\nDuracion : $duracion\nToneladas : $tara\ntTipo : Coche\n Importe : ${alquiler()}")
+        println("*****FURGONETA*****\n" +
+                "\nMatriclua : $matricula\nDuracion : $duracion\nToneladas : $tara\nTipo : Vehiculo Carga\nImporte : ${alquiler()}")
     }
 }

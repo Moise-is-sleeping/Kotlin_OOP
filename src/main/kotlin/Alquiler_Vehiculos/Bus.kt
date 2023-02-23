@@ -11,6 +11,6 @@ class Bus :VehiculoTransporte{
     }
 
     override fun recibo() {
-        println("Matriclua : $matricula\nDuracion : $duracion\nPlazas : $plaza\ntTipo : Coche\n Importe : ${alquiler()}")
+        println("*****BUS*****\n\nMatriclua : $matricula\nDuracion : $duracion\nPlazas : $plaza\nTipo : Vehiculo Transporte\nImporte : ${alquiler()}")
     }
 }
