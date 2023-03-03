@@ -7,7 +7,9 @@ fun main (){
     val bebida2 = bebidaAzucaradavar(3.5,2,"Fanta",2)
     listaProdcuto.add(bebida1)
     listaProdcuto.add(bebida2)
-    almacen.añadirProducto(1,listaProdcuto)
-    println(almacen.calcularPrecioMarca())
+    almacen.anadirProducto(listaProdcuto)
+//    println(almacen.calcularPrecioMarca())
+//    println(almacen.calcularPrecioTotal())
+    almacen.calcularPrecioEstanteria()
 
 }

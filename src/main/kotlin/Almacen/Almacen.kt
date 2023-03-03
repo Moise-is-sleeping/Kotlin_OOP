@@ -2,18 +2,20 @@ package Almacen
 
 class Almacen {
     var almacen = mutableMapOf<Int,MutableList<Bebida>>()
+    var numEstanteria = 1
 
 
-    fun añadirProducto(estanteria : Int, list : MutableList<Bebida>){
-        almacen.put(estanteria,list)
+    fun anadirProducto(list : MutableList<Bebida>){
+            almacen.put(numEstanteria,list)
+            numEstanteria += 1
+
     }
 
     fun calcularPrecioTotal(): Double{
         var total = 0.0
         for((key, value)in almacen){
             for(item in value){
-                print("Cantidad : ")
-                total += item.calcular(readln().toInt())
+                total += item.calcular(1)
             }
         }
         return total
@@ -32,6 +34,20 @@ class Almacen {
             }
         }
         return total
+    }
+    fun calcularPrecioEstanteria(){
+        print("Numero de estanteria : ")
+        val a = readln().toInt()
+        var total = 0.0
+        for((key,value) in almacen){
+            if(a == key){
+                for(item in value){
+                    total += item.precio
+                }
+            }
+        }
+        print("Precio total : $total")
+
     }
 
 }

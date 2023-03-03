@@ -1,6 +1,6 @@
 package Almacen
 
-class bebidaAzucaradavar ( var precio: Double, litros : Int, marca : String, porcentajeAzucar : Int):Bebida(precio,litros,marca){
+class bebidaAzucaradavar ( precio: Double, litros : Int, marca : String, porcentajeAzucar : Int):Bebida(precio,litros,marca){
     private var promocion = 0.1
     var identificator = 0
         set(value) {
