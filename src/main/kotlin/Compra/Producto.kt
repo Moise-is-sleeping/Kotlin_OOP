@@ -23,7 +23,14 @@ abstract class Producto(nombre : String,precio : Double) {
         this.nombre = nombre
         this.precio = precio
     }
+    companion object{
+        val tipos = mutableListOf("Bebidas","Legumbre","Verduras")
+    }
     abstract fun info()
+
+    fun anadirTipo(nuevoTipo : String){
+        tipos.add(nuevoTipo)
+    }
 
     open fun calcular(cantidad : Int):Double{
         return precio * cantidad

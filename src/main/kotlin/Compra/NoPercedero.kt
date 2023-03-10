@@ -4,7 +4,6 @@ class NoPercedero (nombre : String,precio : Double,tipo : String):Producto(nombr
 
     var tipo = tipo
         set(value) {
-            val tipos = listOf("Bebidas","Legumbre","Verduras")
             if(value in tipos){
                 field = value
             }else{

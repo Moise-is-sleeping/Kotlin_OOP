@@ -25,6 +25,12 @@ fun main() {
             val d = readln()
             val producto2 = NoPercedero(b,c,d)
             compra.comprar(producto2)
+            print("Anadir Tipo ?(y/n) : ")
+            val g = readln()
+            if (g == "y"){
+                print("Nuevo Tipo : ")
+                producto2.anadirTipo(readln())
+            }
         }
         else{
             break
