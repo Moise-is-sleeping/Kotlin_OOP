@@ -1,0 +1,6 @@
+Item : TV 
+Size:22 
+Manufacturer : Samsung 
+Original Price :299.0 
+Discounted Price :0.0 
+ID : 0

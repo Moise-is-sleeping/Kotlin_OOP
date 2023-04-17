@@ -11,9 +11,10 @@ class TV: Electronics {
         Sale_price = regularPrice * 0.8
         return Sale_price
     }
-    override fun subtotal(){
-        println("Item : TV \nSize:$size \nManufacturer : $manufacturer")
-        println("Original Price :$regularPrice")
-        println("Discounted Price :$Sale_price")
+    override fun subtotal():Any {
+        return "Item : TV \nSize:$size \nManufacturer : $manufacturer \nOriginal Price :$regularPrice \nDiscounted Price :$Sale_price \nID : $id"
     }
+
+
+
 }

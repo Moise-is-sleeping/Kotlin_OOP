@@ -12,10 +12,8 @@ class Book : Product{
         Sale_price = regularPrice * 0.5
         return Sale_price
     }
-    override fun subtotal(){
-        println("Item : Book \nPublisher : $publisher\nYear Published :$Year_published")
-        println("Original Price :$regularPrice")
-        println("Discounted Price :$Sale_price")
+    override fun subtotal():Any{
+        return "Item : Book \nPublisher : $publisher\nYear Published :$Year_published\nOriginal Price :$regularPrice \nDiscounted Price :$Sale_price \nID : $id"
     }
 
 }

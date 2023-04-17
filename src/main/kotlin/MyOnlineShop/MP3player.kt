@@ -11,10 +11,8 @@ class MP3player:Electronics{
         Sale_price = regularPrice * 0.9
         return Sale_price
     }
-    override fun subtotal(){
-        println("Item : MP3player \nColor:$color \nManufacturer : $manufacturer")
-        println("Original Price :$regularPrice")
-        println("Discounted Price :$Sale_price")
+    override fun subtotal():Any{
+        return "Item : MP3player \nColor:$color \nManufacturer : $manufacturer \nOriginal Price :$regularPrice \nDiscounted Price :$Sale_price \nID : $id"
     }
 
 }
